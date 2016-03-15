@@ -11,13 +11,22 @@ import (
 )
 
 func main() {
-	stdInbytes, _ := ioutil.ReadAll(os.Stdin)
+	var inputData []byte
+	if len(os.Args) > 1 {
 
-	if len(stdInbytes) > 0 {
+		inputData = []byte(os.Args[1])
+
+	} else {
+
+		inputData, _ = ioutil.ReadAll(os.Stdin)
+	}
+
+	if len(inputData) > 0 {
+
 		var parsedJson interface{}
 
-		if err := json.Unmarshal(stdInbytes, &parsedJson); err != nil {
-			log.Println("invalid JSON found \n", string(stdInbytes))
+		if err := json.Unmarshal(inputData, &parsedJson); err != nil {
+			log.Println("invalid JSON found \n", inputData)
 			os.Exit(1)
 		}
 
@@ -35,4 +44,5 @@ func main() {
 	} else {
 		os.Exit(1)
 	}
+
 }
