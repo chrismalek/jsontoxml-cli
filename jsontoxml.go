@@ -31,6 +31,7 @@ func main() {
 		}
 
 		var xmlout []byte
+		anyxml.XMLEscapeChars(true)
 
 		xmlout, err2 := anyxml.Xml(parsedJson, "root")
 
