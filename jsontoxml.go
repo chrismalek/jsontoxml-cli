@@ -47,7 +47,7 @@ func convertJSONToXML(inputData []byte) (xmlout []byte, err error) {
 
 	anyxml.XMLEscapeChars(true)
 	xmlout, err2 := anyxml.Xml(parsedJson, "root")
-	fmt.Printf("convertJSONToXML-converted xml %s\n\n", string(xmlout))
+
 	if err2 != nil {
 		return []byte(""), errors.New("Error converting to XML")
 	}
