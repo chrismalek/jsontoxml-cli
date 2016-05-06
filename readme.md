@@ -4,7 +4,7 @@
 This a tool that will take JSON over STDIN and convert it to XML to STDOUT. This tool is written in Golang. You can install the golang language from https://golang.org and compile this to your operating system.
 
 
-You can build can build it localling using `go build jsontoxml.go` which will build an executable. If you need to cross compile for a different platform that is really easy for golang see below.
+You can build it locally using `go build jsontoxml.go` which will build an executable. If you need to cross compile for a different platform that is really easy for golang see below.
 
 
 
