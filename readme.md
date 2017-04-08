@@ -18,6 +18,9 @@ Here is a command I use to compile from OSX to an 64 bit Linux executable. This 
 There is NO need to install anything else but the artifact produced. The `-o jsontoxml` controls the executable name. So if you want the executable to be called 'superduper-jsontoxml' you would just use that for the `-o` parameters.
 
 
+## Downlaods
+
+See the downloads folder for cross compiled executables built with gox.
 
 ## Usage
 
