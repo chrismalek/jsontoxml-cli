@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/clbanning/anyxml"
+	"github.com/clbanning/mxj"
 )
 
 func main() {
@@ -39,14 +39,14 @@ func main() {
 }
 
 func convertJSONToXML(inputData []byte) (xmlout []byte, err error) {
-	var parsedJson interface{}
+	var parsedJSON interface{}
 
-	if err := json.Unmarshal(inputData, &parsedJson); err != nil {
-		return []byte(""), errors.New(fmt.Sprintf("invalid JSON found %s\n", inputData))
+	if err := json.Unmarshal(inputData, &parsedJSON); err != nil {
+		return []byte(""), fmt.Errorf("invalid JSON found %s\n", inputData)
 	}
 
-	anyxml.XMLEscapeChars(true)
-	xmlout, err2 := anyxml.Xml(parsedJson, "root")
+	mxj.XMLEscapeChars(true)
+	xmlout, err2 := mxj.AnyXml(parsedJSON, "root")
 
 	if err2 != nil {
 		return []byte(""), errors.New("Error converting to XML")

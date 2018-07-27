@@ -1,11 +1,8 @@
 # JSON to XML Command Line Application.
 
+This a tool that will take JSON over STDIN and convert it to XML to STDOUT. This tool is written in [Go](https://golang.org). You can install the Go language from https://golang.org and compile this to your operating system.
 
-This a tool that will take JSON over STDIN and convert it to XML to STDOUT. This tool is written in Golang. You can install the golang language from https://golang.org and compile this to your operating system.
-
-
-You can build it locally using `go build jsontoxml.go` which will build an executable. If you need to cross compile for a different platform that is really easy for golang see below. For example, you have a windows machine and need to compile a Linux executable, golang makes this possible.
-
+You can build it locally using `go build jsontoxml.go` which will build an executable. If you need to cross compile for a different platform that is really easy for Go see below. For example, you have a windows machine and need to compile a Linux executable, Go makes this possible.
 
 ## Cross Compile
 
@@ -15,10 +12,9 @@ Here is a command I use to compile from OSX to an 64 bit Linux executable. This 
 
 `GOOS=linux GOARCH=amd64 go build -o jsontoxml jsontoxml.go`
 
-There is NO need to install anything else but the artifact produced. The `-o jsontoxml` controls the executable name. So if you want the executable to be called 'superduper-jsontoxml' you would just use that for the `-o` parameters.
+There is NO need to install anything else but the artifact produced. The `-o jsontoxml` controls the executable name. So if you want the executable to be called `superduper-jsontoxml` you would just use that for the `-o` parameters.
 
-
-## Downlaods
+## Download
 
 See the downloads folder for cross compiled executables built with gox.
 
@@ -37,4 +33,3 @@ In this example we assume we compiled a binary to `jsontoxml` and call it with s
 returns
 
 `<root><foo>bar</foo></root>`
-
